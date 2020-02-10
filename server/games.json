@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "name": "Read Dead Redemption 2",
+        "status": 0
+    },
+    {
+        "id": 1,
+        "name": "The Last of Us",
+        "status": 1
+    },
+    {
+        "id": 2,
+        "name": "God of War 3",
+        "status": 2
+    },
+    {
+        "id": 3,
+        "name": "Half-Life 2",
+        "status": 0
+    },
+    {
+        "id": 4,
+        "name": "Skyrim",
+        "status": 1
+    },
+    {
+        "id": 5,
+        "name": "Portal 2",
+        "status": 2
+    }
+]
