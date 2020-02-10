@@ -31,16 +31,16 @@ class NotPlayed extends Component {
     render() {
 
         return (
-            <div style={{ borderWidth: "10px", borderStyle: "ridge", height: "100vh", width: "615px", display: "flex", alignItems: "center", flexDirection: "column" }}>
+            <div style={{ borderWidth: "10px", borderStyle: "ridge", height: "100vh", width: "615px", display: "flex", alignItems: "center", flexDirection: "column", backgroundColor: "rgb(255, 0, 0, .50)" }}>
                 <h3 style={{ color: "black", fontSize: "35px", background: "red", height: "60px", width: "400px", display: "flex", justifyContent: "space-around", fontWeight: "bolder", alignItems: "center", borderRadius: "40px", borderWidth: "5px", borderStyle: "ridge", borderColor: "#848484" }}>Not Played</h3>
 
                 <div>
                     <input type="text" placeholder="Add New Game" onChange={this.handleChange} />
-                    <button className={"styleButton"} onClick={() => this.props.addGame(this.state.userInput)} >Add</button>
+                    <button style={{marginLeft: "20px"}} className={"styleButton"} onClick={() => this.props.addGame(this.state.userInput)} >Add</button>
                 </div>
 
                 {this.props.notPlayed.map(element => {
-                    return <div style={{ background: "red", height: "40px", width: "400px", display: "flex", justifyContent: "space-around", fontWeight: "bolder", fontSize: "20px", alignItems: "center", borderRadius: "40px", borderWidth: "5px", borderStyle: "ridge", borderColor: "#848484" }}>
+                    return <div style={{ background: "red", height: "40px", width: "500px", display: "flex", justifyContent: "space-evenly", fontWeight: "bolder", fontSize: "20px", alignItems: "center", borderRadius: "40px", borderWidth: "5px", borderStyle: "ridge", borderColor: "#848484", marginTop: "10px" }}>
                         {this.state.editingID === element.id ? <div>
                             <input onChange={this.handleChange} />
                             <button className={"styleButton"} onClick={() => {
@@ -51,10 +51,10 @@ class NotPlayed extends Component {
                         <button className={"styleButton"} onClick={() => {
                             this.props.addStatus(element.id)
                             this.props.parseArray(this.props.allGames)
-                        }} > --> </button>
+                        }} > >>> </button>
                         <button className={"styleButton"} onClick={() => this.props.deleteGame(element.id)} >Delete</button>
                     </div>
-                })})
+                })}
             </div>
         )
     }
