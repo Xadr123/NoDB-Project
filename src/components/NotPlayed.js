@@ -31,8 +31,8 @@ class NotPlayed extends Component {
     render() {
 
         return (
-            <div>
-                <h3 style={{ color: "white", fontSize: "40px" }}>Not Played</h3>
+            <div style={{ borderWidth: "10px", borderStyle: "ridge", height: "100vh", width: "615px", display: "flex", alignItems: "center", flexDirection: "column" }}>
+                <h3 style={{ color: "black", fontSize: "35px", background: "red", height: "60px", width: "400px", display: "flex", justifyContent: "space-around", fontWeight: "bolder", alignItems: "center", borderRadius: "40px", borderWidth: "5px", borderStyle: "ridge", borderColor: "#848484" }}>Not Played</h3>
 
                 <div>
                     <input type="text" placeholder="Add New Game" onChange={this.handleChange} />
@@ -40,7 +40,7 @@ class NotPlayed extends Component {
                 </div>
 
                 {this.props.notPlayed.map(element => {
-                    return <div style={{ background: "red", height: "40px", width: "400px", display: "flex", justifyContent: "space-around", fontWeight: "bolder", fontSize: "20px", alignItems: "center", borderRadius: "40px", borderWidth: "5px", borderStyle: "ridge", borderColor: "#848484"}}>
+                    return <div style={{ background: "red", height: "40px", width: "400px", display: "flex", justifyContent: "space-around", fontWeight: "bolder", fontSize: "20px", alignItems: "center", borderRadius: "40px", borderWidth: "5px", borderStyle: "ridge", borderColor: "#848484" }}>
                         {this.state.editingID === element.id ? <div>
                             <input onChange={this.handleChange} />
                             <button className={"styleButton"} onClick={() => {

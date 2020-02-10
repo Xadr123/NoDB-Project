@@ -4,19 +4,41 @@
   flex-direction: column;
   text-align: center;
   background-image: url("https://cdnb.artstation.com/p/assets/images/images/012/476/185/large/rafael-de-jongh-synthwave-neon-80s-background-marmoset-revamp-compressed.jpg?1534979006");
-  height: 100vh;
+  height: 100%;
 }
 
 .games-section {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   /* padding-right: 3%; */
 }
 
 .styleButton {
-  color: rgb(255, 255, 255); font-size: 14px; line-height: 14px; padding: 6px; border-radius: 15px; font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(65, 65, 65) 0%, rgb(39, 39, 39) 50%, rgb(0, 0, 0) 100%); box-shadow: rgb(0, 0, 0) 2px 2px 10px 2px; border: 2px solid rgb(255, 255, 255); display: inline-block;}
-  .myButton:hover {
-  background: rgb(255, 255, 255); }
-  .myButton:active {
-  background: #ffffff; }
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 14px;
+  padding: 6px;
+  border-radius: 15px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-image: linear-gradient(
+    to right,
+    rgb(128, 127, 127) 0%,
+    rgb(51, 50, 50) 50%,
+    rgb(0, 0, 0) 100%
+  );
+  box-shadow: rgb(0, 0, 0) 2px 2px 10px 2px;
+  border: 2px solid rgb(255, 255, 255);
+  display: inline-block;
+}
+.styleButton:hover {
+  background: rgb(116, 115, 115);
+}
+.styleButton:active {
+  background: #ffffff;
+}
