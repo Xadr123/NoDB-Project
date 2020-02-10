@@ -36,23 +36,23 @@ class NotPlayed extends Component {
 
                 <div>
                     <input type="text" placeholder="Add New Game" onChange={this.handleChange} />
-                    <button onClick={() => this.props.addGame(this.state.userInput)} >Add</button>
+                    <button className={"styleButton"} onClick={() => this.props.addGame(this.state.userInput)} >Add</button>
                 </div>
 
                 {this.props.notPlayed.map(element => {
-                    return <div style={{ background: "red", height: "40px", width: "400px", display: "flex", justifyContent: "space-around", fontWeight: "bolder", fontSize: "20px", alignItems: "center" }}>
+                    return <div style={{ background: "red", height: "40px", width: "400px", display: "flex", justifyContent: "space-around", fontWeight: "bolder", fontSize: "20px", alignItems: "center", borderRadius: "40px", borderWidth: "5px", borderStyle: "ridge", borderColor: "#848484"}}>
                         {this.state.editingID === element.id ? <div>
                             <input onChange={this.handleChange} />
-                            <button onClick={() => {
+                            <button className={"styleButton"} onClick={() => {
                                 this.props.editGame(element.id, this.state.userInput)
                                 this.toggleEdit(null)
                             }} >Save</button>
                         </div> : <p onDoubleClick={() => { this.toggleEdit(element.id) }} >{element.name}</p>}
-                        <button onClick={() => {
+                        <button className={"styleButton"} onClick={() => {
                             this.props.addStatus(element.id)
                             this.props.parseArray(this.props.allGames)
                         }} > --> </button>
-                        <button onClick={() => this.props.deleteGame(element.id)} >Delete</button>
+                        <button className={"styleButton"} onClick={() => this.props.deleteGame(element.id)} >Delete</button>
                     </div>
                 })})
             </div>
