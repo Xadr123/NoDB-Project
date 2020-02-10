@@ -2,7 +2,7 @@
     {
         "id": 0,
         "name": "Read Dead Redemption 2",
-        "status": 0
+        "status": 1
     },
     {
         "id": 1,
@@ -17,16 +17,16 @@
     {
         "id": 3,
         "name": "Half-Life 2",
-        "status": 0
+        "status": 2
     },
     {
         "id": 4,
         "name": "Skyrim",
-        "status": 0
+        "status": 2
     },
     {
         "id": 5,
         "name": "Portal 2",
-        "status": 0
+        "status": 2
     }
 ]
