@@ -40,7 +40,7 @@ class NotPlayed extends Component {
                 </div>
 
                 {this.props.notPlayed.map(element => {
-                    return <div style={{ background: "red", height: "40px", width: "500px", display: "flex", justifyContent: "space-evenly", fontWeight: "bolder", fontSize: "20px", alignItems: "center", borderRadius: "40px", borderWidth: "5px", borderStyle: "ridge", borderColor: "#848484", marginTop: "10px" }}>
+                    return <div style={{ background: "red", height: "40px", width: "450px", display: "flex", justifyContent: "space-evenly", fontWeight: "bolder", fontSize: "20px", alignItems: "center", borderRadius: "40px", borderWidth: "5px", borderStyle: "ridge", borderColor: "#848484", marginTop: "10px" }}>
                         {this.state.editingID === element.id ? <div>
                             <input onChange={this.handleChange} />
                             <button className={"styleButton"} onClick={() => {
