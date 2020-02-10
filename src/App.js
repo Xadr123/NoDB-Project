@@ -21,6 +21,7 @@ class App extends Component {
     this.deleteGame = this.deleteGame.bind(this)
     this.parseArray = this.parseArray.bind(this)
     this.addStatus = this.addStatus.bind(this)
+    this.deleteStatus = this.deleteStatus.bind(this)
   }
 
   componentDidMount() {
@@ -36,7 +37,19 @@ class App extends Component {
   }
 
   addStatus(id) {
-    axios.put(`/api/games/status/${id}`).then((res) => {
+    axios.put(`/api/games/upstatus/${id}`).then((res) => {
+      let gamesLists = this.parseArray(res.data)
+      this.setState({
+        gamesNotPlayed: gamesLists.notPlayed,
+        gamesInProgress: gamesLists.inProgress,
+        gamesPlayed: gamesLists.havePlayed,
+        allGames: res.data
+      })
+    })
+  }
+
+  deleteStatus(id) {
+    axios.put(`/api/games/downstatus/${id}`).then((res) => {
       let gamesLists = this.parseArray(res.data)
       this.setState({
         gamesNotPlayed: gamesLists.notPlayed,
@@ -103,8 +116,8 @@ class App extends Component {
         <Header />
         <section className="games-section">
           <NotPlayed notPlayed={this.state.gamesNotPlayed} editGame={this.editGame} addGame={this.addGame} deleteGame={this.deleteGame} parseArray={this.parseArray} allGames={this.state.allGames} addStatus={this.addStatus} />
-          <InProgress inProgress={this.state.gamesInProgress} deleteGame={this.deleteGame} parseArray={this.parseArray} allGames={this.state.allGames} addStatus={this.addStatus} />
-          <HavePlayed havePlayed={this.state.gamesPlayed} deleteGame={this.deleteGame} parseArray={this.parseArray} allGames={this.state.allGames} />
+          <InProgress inProgress={this.state.gamesInProgress} deleteGame={this.deleteGame} parseArray={this.parseArray} allGames={this.state.allGames} addStatus={this.addStatus} deleteStatus={this.deleteStatus} />
+          <HavePlayed havePlayed={this.state.gamesPlayed} deleteGame={this.deleteGame} parseArray={this.parseArray} allGames={this.state.allGames} deleteStatus={this.deleteStatus} />
         </section>
       </div>
     )

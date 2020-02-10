@@ -55,7 +55,19 @@ module.exports = {
             return element.id === +id
         })
 
-        gamesList[index].status ++
+        gamesList[index].status++
+
+        res.status(200).send(gamesList)
+    },
+
+    deleteStatus: (req, res) => {
+        const { id } = req.params
+
+        const index = gamesList.findIndex(element => {
+            return element.id === +id
+        })
+
+        gamesList[index].status--
 
         res.status(200).send(gamesList)
     }

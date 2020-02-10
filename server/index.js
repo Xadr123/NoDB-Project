@@ -18,7 +18,9 @@ app.post('/api/games', gamesController.addGamesList)
 
 app.delete('/api/games/:id', gamesController.deleteGamesList)
 
-app.put('/api/games/status/:id', gamesController.addStatus)
+app.put('/api/games/upstatus/:id', gamesController.addStatus)
+
+app.put('/api/games/downstatus/:id', gamesController.deleteStatus)
 
 const PORT = 4040
 
